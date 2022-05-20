@@ -53,24 +53,24 @@
     font-family: 'Titillium web', sans-serif ;
 }
 
-.lower__container h3, h4, p {
+.lower__container .lower__h3, .lower__h4, .lower__p {
     margin: 15px;
     padding: 0;
 }
 
-.lower__container h3 {
+.lower__container .lower__h3 {
     color: #2f2d2e;
     font-weight: 600;
     font-size: 1.5rem;
 }
 
-.lower__container h4 {
+.lower__container .lower__h4 {
     color: #C1576A;
     font-weight: 700;
     font-size: 1.2rem;
 }
 
-.lower__container p {
+.lower__container .lower__p {
     margin: 1rem;
     font-weight: 300;
     color: #2f2d2e;
@@ -78,7 +78,7 @@
     text-align: justify;
 }
 
-button {
+.view__btn {
     margin: 1rem;
     width: 90px;
     margin-top: 10px;
@@ -92,7 +92,7 @@ button {
     animation: ease-in-out;
 }
 
-button:hover {
+.view__btn:hover {
     background-image: linear-gradient(to left, #C1576A, #f0a7b4);
     transform: scale(1.2);
     border: none;

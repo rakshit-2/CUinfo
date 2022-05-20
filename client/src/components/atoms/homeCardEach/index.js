@@ -20,10 +20,10 @@ const  HomeCardEach=()=> {
             </div>
           </div>
           <div className="lower__container">
-            <h3>{category}</h3>
-            <h4>{title}</h4>
-            <p>{about}</p>
-            <button>View</button>
+            <h3 className='lower__h3'>{category}</h3>
+            <h4 className='lower__h4'>{title}</h4>
+            <p className='lower__p'>{about}</p>
+            <button className='view__btn'>View</button>
           </div>
         </div>
 
@@ -35,10 +35,10 @@ const  HomeCardEach=()=> {
             </div>
           </div>
           <div className="lower__container">
-            <h3>{category}</h3>
-            <h4>{title}</h4>
-            <p>{about}</p>
-            <button>View</button>
+            <h3 className='lower__h3'>{category}</h3>
+            <h4 className='lower__h4'>{title}</h4>
+            <p className='lower__p'>{about}</p>
+            <button className='view__btn'>View</button>
           </div>
         </div>
 
@@ -50,10 +50,10 @@ const  HomeCardEach=()=> {
             </div>
           </div>
           <div className="lower__container">
-            <h3>{category}</h3>
-            <h4>{title}</h4>
-            <p>{about}</p>
-            <button>View</button>
+            <h3 className='lower__h3'>{category}</h3>
+            <h4 className='lower__h4'>{title}</h4>
+            <p className='lower__p'>{about}</p>
+            <button className='view__btn'>View</button>
           </div>
         </div>
 
@@ -65,10 +65,10 @@ const  HomeCardEach=()=> {
             </div>
           </div>
           <div className="lower__container">
-            <h3>{category}</h3>
-            <h4>{title}</h4>
-            <p>{about}</p>
-            <button>View</button>
+            <h3 className='lower__h3'>{category}</h3>
+            <h4 className='lower__h4'>{title}</h4>
+            <p className='lower__p'>{about}</p>
+            <button className='view__btn'>View</button>
           </div>
         </div>
       </div>
