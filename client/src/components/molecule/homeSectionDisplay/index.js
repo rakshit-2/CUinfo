@@ -1,5 +1,4 @@
 import './index.css';
-import React from 'react';
 
 
 
@@ -7,7 +6,7 @@ const  HomeSectionDisplay=()=> {
   return (
     <>
       
-    
+    Info section
     </>
   );
 }
