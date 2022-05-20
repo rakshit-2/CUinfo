@@ -60,3 +60,44 @@
     height: 500px;
     background-size: cover;
 }
+
+
+/* Media Queries */
+
+@media screen and (min-width: 768px){
+  
+    .outer__container{
+      height: 100vh;
+      grid-template-columns: repeat(2, max-content);
+      grid-template-rows:  1fr;
+      row-gap: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .info__img{
+      order: 1;
+      width: 375px;
+      height: 289px;
+    }
+  
+    .info__img img{
+      width: 375px;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .outer__container{
+      justify-content: initial;
+      column-gap: 4.5rem;
+    }
+  
+    .info__img{
+      width: 604px;
+      height: 466px;
+    }
+  
+    .info__img img{
+      width: 604px;
+    }
+  }
