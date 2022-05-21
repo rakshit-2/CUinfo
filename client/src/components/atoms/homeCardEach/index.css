@@ -1,32 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
-.heading {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.card__section{
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
+
+
 
 .card {
     margin: 30px;
     width: 300px;
-    height: 480px;
+    height: 350px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0px 1px 10px 1px black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     overflow: hidden;
+    cursor: pointer;
 }
-
+.card:hover{
+    box-shadow: 0px 1px 10px 1px black;
+}
 .upper__container {
     height: 100px;
     background: linear-gradient(to left, #C1576A, #f0a7b4);
@@ -74,11 +65,11 @@
     margin: 1rem;
     font-weight: 300;
     color: #2f2d2e;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: justify;
 }
 
-.view__btn {
+/* .view__btn {
     margin: 1rem;
     width: 90px;
     margin-top: 10px;
@@ -97,4 +88,4 @@
     transform: scale(1.2);
     border: none;
     color: white;
-}
+} */

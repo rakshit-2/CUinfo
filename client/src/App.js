@@ -4,8 +4,11 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Main from "./components/organism/main/index"
-
+import HomePage from "./components/organism/homePage/index";
+import Notes from "./components/organism/notes/index";
+import Event from "./components/organism/event/index";
+import Dsa from "./components/organism/dsa/index";
+import Youtube from "./components/organism/youtube/index";
 
 
 
@@ -17,7 +20,19 @@ const App =()=> {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main />}></Route>
+          <Route path="/" element={<HomePage />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/notes" element={<Notes />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/dsa" element={<Dsa />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/event-notice" element={<Event />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/youtube" element={<Youtube />}></Route>
         </Routes>
       </BrowserRouter>
     </>
