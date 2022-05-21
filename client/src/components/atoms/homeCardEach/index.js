@@ -1,23 +1,30 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './index.css';
-import Image1 from '../../assets/images/info_img.png'
 
 const  HomeCardEach=(props)=> {
 
-  function handleClick(x)
+  const navigate = useNavigate();
+
+
+  function handleClickCard(x)
   {
     switch(x) {
       case 0:
         console.log("notes");
+        navigate("/notes");
         break;
       case 1:
-        console.log("dsa")
+        console.log("dsa");
+        navigate("/dsa");
         break;
       case 2:
-        console.log("event/notice")
+        console.log("event-notice");
+        navigate("/event-notice");
         break;
       case 3:
-        console.log("youtube")
+        console.log("youtube");
+        navigate("/youtube");
         break;
       default:
         console.log("oh")
@@ -25,7 +32,8 @@ const  HomeCardEach=(props)=> {
   }
   return (
     <>
-      <div className="card" onClick={()=>{handleClick(props.index)}}>
+    
+      <div className="card" onClick={()=>{handleClickCard(props.index)}}>
         <div className="upper__container">
           <div className="img__container">
             <img className='card__img' src={props.img} alt="" height="100px" width="100px" />
