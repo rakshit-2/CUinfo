@@ -9,7 +9,7 @@ const  HomeSectionDisplay=()=> {
       <div className="outer__container">
         <div className="inner__container__1">
           <div className="info">
-            <h1 className="info__title">Notes<br/> From CUinfo</h1>
+            <div className="info__title">Notes<br/> From CUinfo</div>
             <p className="info__desc">These notes are created by one and only Rakshit sharma with extraordiary efforts</p>
             <a href="#homeSectionCard" className="info__button">Get started</a>
           </div>
