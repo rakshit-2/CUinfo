@@ -5,7 +5,7 @@
     margin: 30px;
     width: 300px;
     height: 350px;
-    background: white;
+    background: rgb(251, 249, 249);
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -39,7 +39,7 @@
 .lower__container {
     margin-top: 60px;
     height: 300px;
-    background: white;
+    
     text-align: center;
     font-family: 'Titillium web', sans-serif ;
 }
