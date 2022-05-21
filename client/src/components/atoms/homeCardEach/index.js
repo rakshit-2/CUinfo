@@ -2,74 +2,38 @@ import React, {useState} from 'react'
 import './index.css';
 import Image1 from '../../assets/images/info_img.png'
 
-const  HomeCardEach=()=> {
+const  HomeCardEach=(props)=> {
 
-  const [category, setCategory] = useState('category');
-  const [title, setTitle] = useState('Title');
-  const [about, setAbout] = useState('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.');
-
+  function handleClick(x)
+  {
+    switch(x) {
+      case 0:
+        console.log("notes");
+        break;
+      case 1:
+        console.log("dsa")
+        break;
+      case 2:
+        console.log("event/notice")
+        break;
+      case 3:
+        console.log("youtube")
+        break;
+      default:
+        console.log("oh")
+    }
+  }
   return (
     <>
-      <h1 className='heading'>Services Provided By Rakshit Sharma</h1>
-      <div className="card__section">
-
-        <div className="card">
-          <div className="upper__container">
-            <div className="img__container">
-              <img className='card__img' src={Image1} alt="" height="100px" width="100px" />
-            </div>
-          </div>
-          <div className="lower__container">
-            <h3 className='lower__h3'>{category}</h3>
-            <h4 className='lower__h4'>{title}</h4>
-            <p className='lower__p'>{about}</p>
-            <button className='view__btn'>View</button>
+      <div className="card" onClick={()=>{handleClick(props.index)}}>
+        <div className="upper__container">
+          <div className="img__container">
+            <img className='card__img' src={props.img} alt="" height="100px" width="100px" />
           </div>
         </div>
-
-
-        <div className="card">
-          <div className="upper__container">
-            <div className="img__container">
-              <img className='card__img' src={Image1} alt="" height="100px" width="100px" />
-            </div>
-          </div>
-          <div className="lower__container">
-            <h3 className='lower__h3'>{category}</h3>
-            <h4 className='lower__h4'>{title}</h4>
-            <p className='lower__p'>{about}</p>
-            <button className='view__btn'>View</button>
-          </div>
-        </div>
-
-
-        <div className="card">
-          <div className="upper__container">
-            <div className="img__container">
-              <img className='card__img' src={Image1} alt="" height="100px" width="100px" />
-            </div>
-          </div>
-          <div className="lower__container">
-            <h3 className='lower__h3'>{category}</h3>
-            <h4 className='lower__h4'>{title}</h4>
-            <p className='lower__p'>{about}</p>
-            <button className='view__btn'>View</button>
-          </div>
-        </div>
-
-
-        <div className="card">
-          <div className="upper__container">
-            <div className="img__container">
-              <img className='card__img' src={Image1} alt="" height="100px" width="100px" />
-            </div>
-          </div>
-          <div className="lower__container">
-            <h3 className='lower__h3'>{category}</h3>
-            <h4 className='lower__h4'>{title}</h4>
-            <p className='lower__p'>{about}</p>
-            <button className='view__btn'>View</button>
-          </div>
+        <div className="lower__container">
+          <h4 className='lower__h4'>{props.name}</h4>
+          <p className='lower__p'>{props.info}</p>
         </div>
       </div>
     </>
