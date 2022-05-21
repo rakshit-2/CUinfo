@@ -1,9 +1,9 @@
 import './index.css';
 import HomeCardEach from '../../atoms/homeCardEach';
-import notes_image from './../../assets/images/notes.png';
-import info_img from './../../assets/images/info_img.png';
-
-
+import notes_image from './../../assets/images/notes logo.png';
+import dsa_img from './../../assets/images/dsa logo.png';
+import event_logo from './../../assets/images/event logo.png';
+import youtube_logo from './../../assets/images/youtube logo.png';
 
 const  HomeSectionCards=()=> {
 
@@ -11,7 +11,7 @@ const  HomeSectionCards=()=> {
   {
     var li=[];
     var name=["Notes","DSA","Event/Notice","Youtube"];
-    var image=[notes_image,info_img,info_img,info_img];
+    var image=[notes_image,dsa_img,event_logo,youtube_logo];
     var info=["Subject notes, handwritten 100% cho covered Subject notes, handwritten 100% cho covered",
     "Subject notes, handwritten 100% cho covered Subject notes, handwritten 100% cho covered",
     "Subject notes, handwritten 100% cho covered Subject notes, handwritten 100% cho covered",

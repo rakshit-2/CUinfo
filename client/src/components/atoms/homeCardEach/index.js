@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
 
@@ -36,7 +36,7 @@ const  HomeCardEach=(props)=> {
       <div className="card" onClick={()=>{handleClickCard(props.index)}}>
         <div className="upper__container">
           <div className="img__container">
-            <img className='card__img' src={props.img} alt="" height="100px" width="100px" />
+            <img className='card__img' src={props.img} alt=""/>
           </div>
         </div>
         <div className="lower__container">
