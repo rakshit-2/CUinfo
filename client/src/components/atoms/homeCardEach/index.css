@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 .card {
-    margin: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 300px;
     height: 350px;
     background: rgb(251, 249, 249);

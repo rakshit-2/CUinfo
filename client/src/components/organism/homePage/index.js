@@ -8,14 +8,16 @@ import HomeSectionNavbar from "./../../molecule/homeSectionNavbar/index"
 const  HomePage=()=> {
   return (
     <>
-    
-      <HomeSectionNavbar/>
-      <br></br>
-      <HomeSectionDisplay/>
-      <br></br>
-      <HomeSectionCards/>
-      <br></br>
-      <HomeSectionFeedback/>
+      <div className='home__page__outer'>
+        <HomeSectionNavbar/>
+        <br></br>
+        <HomeSectionDisplay/>
+        <br></br>
+        <HomeSectionCards/>
+        <br></br>
+        <HomeSectionFeedback/>
+      </div>
+      
 
     </>
   );

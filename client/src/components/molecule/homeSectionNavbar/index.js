@@ -5,7 +5,7 @@ const  homeSectionNavbar=()=> {
   return (
     <>
       <nav>
-        <a href="#admin" className="admin">ADMIN</a>
+        <div className="admin">ADMIN</div>
       </nav>
     </>
   );
