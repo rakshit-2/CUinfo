@@ -18,16 +18,21 @@
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
+    cursor: pointer;
     background: rgb(251, 249, 249);
 }
+
+.notes__card__item:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 .notes__card__photo{
-    width:180px;
+    width:30%;
     padding:20px;
     height:100%;
     border-radius: 10px;
 }
 .notes__card__info{
-    width:420px;
+    width:70%;
     height:100%;
 }
 
@@ -37,4 +42,42 @@
 
 .notes__card__text {
     margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:573px)
+{
+    .notes__card__section{
+        width:95%;
+    }
+    .notes__card__item{
+        width:450px;
+        height:120px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .notes__card__title {
+        font-size: 14px;
+    }
+    .notes__card__text {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width:462px)
+{
+    .notes__card__photo{
+        display: none;
+    }
+    .notes__card__info{
+        width:95%;
+    }
 }

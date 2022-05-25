@@ -35,9 +35,7 @@ const  HomeCardEach=(props)=> {
     
       <div className="card" onClick={()=>{handleClickCard(props.index)}}>
         <div className="upper__container">
-          <div className="img__container">
-            <img className='card__img' src={props.img} alt=""/>
-          </div>
+          <img src={props.img} className="home__card__img"/>
         </div>
         <div className="lower__container">
           <h4 className='lower__h4'>{props.name}</h4>
