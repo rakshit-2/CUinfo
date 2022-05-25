@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+.notes__outer{
+  width:100;
+  height:fit-content;
+}
+.notes__section1{
+  width:100%;
+  height:20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notes_img{
+  width:500px;
+  height:85%;
+}
+
+
+.notes__heading{
+  width:100%;
+  height:fit-content;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.notes__catogary__outer{
+  width:100%;
+  height:fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notes__card__outer{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:fit-content;
+}

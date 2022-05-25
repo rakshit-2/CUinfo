@@ -1,0 +1,25 @@
+.notes__category__container{
+    width:85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:6rem;
+}
+  
+.filter-btn {
+    background: transparent;
+    border-color: transparent;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 5px;
+    letter-spacing: 2px;
+    padding: 3px 10px;
+    color:  #C1576A;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+}
+
+.active {
+    border-bottom: 2px solid;
+}
