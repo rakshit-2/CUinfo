@@ -2,92 +2,87 @@ import React, { useState } from "react";
 import './index.css';
 import items from "./../../assets/store/notesCardData";
 import notes_img1 from './../../assets/images/notesImage/notes img1.svg'
-import Catogary from './../../atoms/notesCatogaryEach/index';
+import CatogaryFile from './../../atoms/notesCatogaryEach/index';
 import Card from './../../atoms/notesCardEach/index';
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
-const  Notes=()=> {
+const Notes=()=> {
   
   const [cardItems, setCardItems] = useState(items);
   const [activeCategory, setActiveCategory] = useState("");
   const [categories, setCategories] = useState(allCategories);
-  const [filterDisplay, setFilterDisplay] = useState("none");
-  const [notesDisplay, setNotesDisplay] = useState("block");
+  const [notesDisplay, setNotesDisplay] = useState({page:"block",filter:"none"});
 
-
-  const changeFilterDisplayFunc=(props)=>{
-    if(props===1)
+  const changeFilterDisplayFunc=(x)=>{
+    if(x===1)
     {
-      setFilterDisplay("block");
-      setNotesDisplay("none");
+      setNotesDisplay({page:"none",filter:"block"});
     }
     else
     {
-      setFilterDisplay("none");
-      setNotesDisplay("block");
+      setNotesDisplay({page:"block",filter:"none"});
     }
     
   }
-
-  const filterItems = (category) => {
+  
+  const filterItems = (x) => {
     changeFilterDisplayFunc(0);
-    setActiveCategory(category);
-    if (category === "all") {
+    setActiveCategory(x);
+    if (x==="all") {
       setCardItems(items);
-      return;
+      // return;
     }
-    const newItems = items.filter((item) => item.category === category);
+    const newItems = items.filter((item) => item.category === x);
     setCardItems(newItems);
   };
 
 
   return (
     <>
-    <div className="notes__outer__outer" style={{display:notesDisplay}}>
+    <div className="notes__outer__outer" style={{display:notesDisplay.page}}>
       <div className="notes__outer">
         <div className="notes__section1">
-          <img src={notes_img1} className="notes_img"/>
+          <img src={notes_img1} className="notes_img" alt=""/>
         </div>
         <div className="notes__heading">
           Notes
         </div>
-        <div className="notes__catogary__outer">
-          <Catogary
+        {/* <div className="notes__catogary__outer">
+          <CatogaryFile
             categories={categories}
             activeCategory={activeCategory}
             filterItems={filterItems}
-            filterDisplay={filterDisplay}
             changeFilterDisplayFunc={changeFilterDisplayFunc}
           />
-        </div>
+        </div> */}
         <div className="notes__card__outer">
           <Card items={cardItems} />
         </div>
       </div>
     </div>
 
-    <div className="notes__filter__modale__outer" style={{display:filterDisplay}}>
+    {/* <div className="notes__filter__modale__outer" style={{display:notesDisplay.filter}}>
       <div className="notes__filter__modale__inner">
         <div className="notes__filter__close" onClick={()=>{changeFilterDisplayFunc(0)}}>
-            Close
-          </div>
-          {categories.map((categories, index) => {
+          Close
+        </div>
+          {categories.map((category, index) => {
             return (
               <button
                 type="button"
                 className={`${
-                  activeCategory === categories ? "notes__filter__btn__mobile notes__active__mobile" : "notes__filter__btn__mobile"
+                  activeCategory === category ? "notes__filter__btn__mobile notes__active__mobile" : "notes__filter__btn__mobile"
                 }`}
                 key={index}
-                onClick={() => filterItems(categories)}
+                onClick={() => filterItems(category)}
               >
-                {categories}
+                {category}
               </button>
             );
           })}
       </div>
-    </div>
+    </div> */}
     </>
   );
 }
