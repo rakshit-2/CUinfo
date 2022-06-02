@@ -18,6 +18,11 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+
+
+// notes pdfs apis
+
+
 app.get('/pdf1',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_1.pdf", function (err) {
         if (err) {

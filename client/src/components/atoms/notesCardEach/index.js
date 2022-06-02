@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import './index.css';
-import Axios from 'axios';
-const fileDownload = require('js-file-download');
 
 const notesCardEach = ({ items }) => {
-
-  
-
   return (
     <div className="notes__card__section">
       {items.map((item) => {

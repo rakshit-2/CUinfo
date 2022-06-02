@@ -4,7 +4,7 @@ import notes_filter from './../../assets/images/notesImage/notes filter.svg'
 
 
 
-const catogaryEach = ({ categories, filterItems, activeCategory ,filterDisplay,changeFilterDisplayFunc}) => {
+const catogaryEach = ({ categories, filterItems, activeCategory ,changeFilterDisplayFunc}) => {
   
   
   

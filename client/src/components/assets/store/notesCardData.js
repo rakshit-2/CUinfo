@@ -1,4 +1,4 @@
-import notes_img1 from "./../images/notesImage/notes img1.svg";
+// import notes_img1 from "./../images/notesImage/notes img1.svg";
 import notes_img2 from "./../images/notesImage/notes img2.svg";
 import notes_img3 from "./../images/notesImage/notes img3.svg";
 import notes_img4 from "./../images/notesImage/notes img4.svg";
@@ -8,7 +8,7 @@ import notes_img7 from "./../images/notesImage/notes img7.svg";
 import notes_img8 from "./../images/notesImage/notes img8.svg";
 import notes_img9 from "./../images/notesImage/notes img9.svg";
 import notes_img10 from "./../images/notesImage/notes img10.svg";
-import notes_img11 from "./../images/notesImage/notes img11.svg";
+// import notes_img11 from "./../images/notesImage/notes img11.svg";
 
 
 const notesCardData = [
