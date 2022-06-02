@@ -21,6 +21,9 @@ const  Dsa=()=> {
           <div className="dsa__section1">
             <img src={dsa_img1} className="dsa_img" alt=""/>
           </div>
+          <div className="dsa__heading__mobile">
+            DSA
+          </div>
           <div className="dsa__heading">
             Data Structure And Algorithms (DSA)
           </div>

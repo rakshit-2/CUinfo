@@ -55,3 +55,15 @@
     justify-content: space-around;
 }
 
+
+
+@media screen and (max-width:770px)
+{
+    .dsa__section__inner__left{
+        display: none;
+    }
+    .dsa__section__inner__right{
+        width:95%;
+    }
+}
+

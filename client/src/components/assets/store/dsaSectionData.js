@@ -7,7 +7,7 @@ import dsa_img4 from "./../images/dsaimage/dsa img4.svg"
 
 const dsaSectionData = {
     0:  {
-        name:"GeeksForGeeks (GFG)",
+        name:"GeeksForGeeks",
         image:dsa_img1,
         cards:{
             0:{

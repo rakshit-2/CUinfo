@@ -28,3 +28,21 @@
     font-size: 13px;
     height:fit-content;
 }
+
+
+
+@media screen and (max-width:770px)
+{
+    .dsa__card__outer{
+        width:90%;
+    }
+}
+@media screen and (max-width:380px)
+{
+    .dsa__card__name{
+        font-size: 15px;
+    }
+    .dsa__card__info{
+        font-size: 12px;
+    }
+}

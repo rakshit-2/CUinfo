@@ -34,3 +34,60 @@
   font-family: 'Oswald', sans-serif;
 
 }
+.dsa__heading__mobile{
+  width:100%;
+  height:6rem;
+  font-size: 3rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+@media screen and (min-width:1510px)
+{
+  .dsa__outer{
+      width:90%;
+  }
+}
+@media screen and (min-width:2000px)
+{
+  .dsa__outer{
+      width:80%;
+  }
+}
+@media screen and (min-width:2100px)
+{
+  .dsa__outer{
+      width:60%;
+  }
+}
+@media screen and (max-width:770px)
+{
+  .dsa__heading{
+    font-size: 2.5rem;
+  
+  }
+}
+@media screen and (max-width:541px)
+{
+  .dsa__heading{
+    font-size: 2rem;
+  }
+  .dsa__section1{
+    width:100%;
+    height:15rem;
+  }
+}
+@media screen and (max-width:432px)
+{
+  .dsa__heading__mobile{
+    display: flex;
+  }
+  .dsa__heading{
+    display: none;
+  }
+}
