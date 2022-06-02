@@ -1,46 +1,46 @@
-import React, { useState } from "react";
+import React from "react";
 import './index.css';
 import items from "./../../assets/store/notesCardData";
 import notes_img1 from './../../assets/images/notesImage/notes img1.svg'
-import CatogaryFile from './../../atoms/notesCatogaryEach/index';
+// import CatogaryFile from './../../atoms/notesCatogaryEach/index';
 import Card from './../../atoms/notesCardEach/index';
 
-const allCategories = ["all", ...new Set(items.map((item) => item.category))];
+// const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
 const Notes=()=> {
   
-  const [cardItems, setCardItems] = useState(items);
-  const [activeCategory, setActiveCategory] = useState("");
-  const [categories, setCategories] = useState(allCategories);
-  const [notesDisplay, setNotesDisplay] = useState({page:"block",filter:"none"});
+  // const [cardItems, setCardItems] = useState(items);
+  // const [activeCategory, setActiveCategory] = useState("");
+  // const [categories, setCategories] = useState(allCategories);
+  // const [notesDisplay, setNotesDisplay] = useState({page:"block",filter:"none"});
 
-  const changeFilterDisplayFunc=(x)=>{
-    if(x===1)
-    {
-      setNotesDisplay({page:"none",filter:"block"});
-    }
-    else
-    {
-      setNotesDisplay({page:"block",filter:"none"});
-    }
+  // const changeFilterDisplayFunc=(x)=>{
+  //   if(x===1)
+  //   {
+  //     setNotesDisplay({page:"none",filter:"block"});
+  //   }
+  //   else
+  //   {
+  //     setNotesDisplay({page:"block",filter:"none"});
+  //   }
     
-  }
+  // }
   
-  const filterItems = (x) => {
-    changeFilterDisplayFunc(0);
-    setActiveCategory(x);
-    if (x==="all") {
-      setCardItems(items);
-      // return;
-    }
-    const newItems = items.filter((item) => item.category === x);
-    setCardItems(newItems);
-  };
+  // const filterItems = (x) => {
+  //   changeFilterDisplayFunc(0);
+  //   setActiveCategory(x);
+  //   if (x==="all") {
+  //     setCardItems(items);
+  //     // return;
+  //   }
+  //   const newItems = items.filter((item) => item.category === x);
+  //   setCardItems(newItems);
+  // };
 
 
   return (
     <>
-    <div className="notes__outer__outer" style={{display:notesDisplay.page}}>
+    <div className="notes__outer__outer" >
       <div className="notes__outer">
         <div className="notes__section1">
           <img src={notes_img1} className="notes_img" alt=""/>
@@ -57,7 +57,7 @@ const Notes=()=> {
           />
         </div> */}
         <div className="notes__card__outer">
-          <Card items={cardItems} />
+          <Card items={items} />
         </div>
       </div>
     </div>
