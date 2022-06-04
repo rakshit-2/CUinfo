@@ -87,6 +87,31 @@ app.get('/pdf9',(req,res)=>{
     });
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.get("/eventAll",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from event;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+
+
+
+
+
 app.listen(3001,()=>{
     console.log("running 3001")
 });

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.event__card__inner{
+    width:900px;
+    height:fit-content;
+    border-radius: 10px;
+    background: rgb(251, 249, 249);
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.event__card__inner:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.event__card__heading{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.event__card__heading__no
+{
+    width:5%;
+    height:3rem;
+    display: flex;
+    height:3rem;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    align-items: center;
+    color:#C1576A;
+    justify-content: center;
+}
+.event__card__heading__topic{
+    width:75%;
+    min-height: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    text-decoration: underline;
+    align-items: center;
+    height:fit-content;
+    font-family: 'Oswald', sans-serif;
+}
+
+.event__card__heading__date{
+    width:20%;
+    height:3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.event__card__text{
+    padding: 10px;
+    width:100%;
+    height: fit-content;
+}
