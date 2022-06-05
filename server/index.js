@@ -107,8 +107,34 @@ app.get("/eventAll",(req,res)=>{
         res.send(result)
     })
 })
-
-
+app.get("/eventDate/accending",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from event ORDER BY date ASC;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+app.get("/eventDate/decending",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from event ORDER BY date DESC;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+app.get("/eventSNo/accending",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from event ORDER BY id ASC;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+app.get("/eventSNo/decending",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from event ORDER BY id DESC;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
 
 
 
