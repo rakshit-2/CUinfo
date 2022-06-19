@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import './index.css';
+import like from './../../assets/images/notesImage/like.png';
+import unlike from './../../assets/images/notesImage/unlike.png';
+
+
 
 const notesCardEach = ({ items }) => {
   return (
@@ -12,7 +16,7 @@ const notesCardEach = ({ items }) => {
           setVal("http://localhost:3001/pdf"+String(x));
         }
         return (
-          <a href={val} key={id} className="notes__card__item" onClick={()=>{handlePdf(id)}}>
+          <a href={val} key={id} className="notes__card__item"  onClick={()=>{handlePdf(id)}}>
             <img src={img} alt={title} className="notes__card__photo" />
             <div className="notes__card__info">
               <header>

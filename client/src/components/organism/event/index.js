@@ -26,6 +26,7 @@ const  Event=()=> {
     {
       name:"eventAll",
     }).then((res)=>{
+      console.log(res.data)
       setAll(res.data);
     });
   }, []);
