@@ -7,15 +7,15 @@ const fs = require('fs')
 
 
 const db=mysql.createPool({
-    host:"localhost",
-    user:"root",
-    password:"password",
-    database:"cuinfo",
+    host:"remotemysql.com",
+    user:"nWBFMprI4e",
+    password:"aqbTzpHOZa",
+    database:"nWBFMprI4e",
 });
 
 app.use(cors());
 app.use(express.json())
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }))
 
 
 
@@ -87,8 +87,63 @@ app.get('/pdf9',(req,res)=>{
     });
 })
 
+
+
+
+
+
+
+
+
+
+
+// event all api
+
+
+app.get("/eventAll",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from cuinfo_events;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+app.get("/eventDate/accending",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from cuinfo_events ORDER BY event_date ASC;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+app.get("/eventDate/decending",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from cuinfo_events ORDER BY event_date DESC;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+app.get("/eventSNo/accending",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from cuinfo_events ORDER BY event_id ASC;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+app.get("/eventSNo/decending",(req,res)=>{
+    var name=req.body.name;
+    const getAll="select * from event ORDER BY event_id DESC;";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+
+
+
+
+
+
+
 app.listen(3001,()=>{
-    console.log("running 3001")
+    console.log("running remote database(fully connected) CUinfo")
 });
 
 
