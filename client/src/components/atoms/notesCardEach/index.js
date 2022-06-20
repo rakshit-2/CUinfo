@@ -13,7 +13,7 @@ const notesCardEach = ({ items }) => {
         const { id, title, img, desc } = item;
         function handlePdf(x)
         {
-          setVal("http://localhost:3001/pdf"+String(x));
+          setVal("https://test-cuinfo.vercel.app/pdf"+String(x));
         }
         return (
           <a href={val} key={id} className="notes__card__item"  onClick={()=>{handlePdf(id)}}>
