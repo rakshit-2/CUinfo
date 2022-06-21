@@ -23,63 +23,63 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // notes pdfs apis
 
 
-app.get('/api/pdf1',(req,res)=>{
+app.get('/pdf1',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_1.pdf", function (err) {
         if (err) {
             console.log(err);
         }
     });
 })
-app.get('/api/pdf2',(req,res)=>{
+app.get('/pdf2',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_2.pdf", function (err) {
         if (err) {
             console.log(err);
         }
     });
 })
-app.get('/api/pdf3',(req,res)=>{
+app.get('/pdf3',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_3.pdf", function (err) {
         if (err) {
             console.log(err);
         }
     });
 })
-app.get('/api/pdf4',(req,res)=>{
+app.get('/pdf4',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_4.pdf", function (err) {
         if (err) {
             console.log(err);
         }
     });
 })
-app.get('/api/pdf5',(req,res)=>{
+app.get('/pdf5',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_5.pdf", function (err) {
         if (err) {
             console.log(err);
         }
     });
 })
-app.get('/api/pdf6',(req,res)=>{
+app.get('/pdf6',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_6.pdf", function (err) {
         if (err) {
             console.log(err);
         }
     });
 })
-app.get('/api/pdf7',(req,res)=>{
+app.get('/pdf7',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_7.pdf", function (err) {
         if (err) {
             console.log(err);
         }
     });
 })
-app.get('/api/pdf8',(req,res)=>{
+app.get('/pdf8',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_8.pdf", function (err) {
         if (err) {
             console.log(err);
         }
     });
 })
-app.get('/api/pdf9',(req,res)=>{
+app.get('/pdf9',(req,res)=>{
     res.download(__dirname + "/pdfs/pdf_subid_9.pdf", function (err) {
         if (err) {
             console.log(err);
@@ -141,9 +141,9 @@ app.get("/eventSNo/decending",(req,res)=>{
 
 
 
-
-app.listen(3001,()=>{
-    console.log("running remote database(fully connected) CUinfo")
+const port=process.env.PORT || 3001;
+app.listen(port,()=>{
+    console.log(`listning on port ${port}`);
 });
 
 
