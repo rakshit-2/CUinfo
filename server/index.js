@@ -130,7 +130,7 @@ app.get("/eventSNo/accending",(req,res)=>{
 })
 app.get("/eventSNo/decending",(req,res)=>{
     var name=req.body.name;
-    const getAll="select * from event ORDER BY event_id DESC;";
+    const getAll="select * from cuinfo_events ORDER BY event_id DESC;";
     db.query(getAll,(err,result)=>{
         res.send(result)
     })
