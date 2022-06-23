@@ -1,4 +1,5 @@
 import './index.css';
+import { useEffect } from 'react';
 import dsa_img1 from './../../assets/images/dsaimage/dsa img10.svg';
 import DsaSectionDisplay from './../../molecule/dsaSectionDisplay/index';
 
@@ -14,6 +15,10 @@ function sectionDisplay()
   return li;
 }
 const  Dsa=()=> {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="dsa__outer__outer" >
