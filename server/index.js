@@ -3,7 +3,6 @@ const app=express();
 const mysql=require("mysql");
 const bodyParser=require('body-parser');
 const cors=require('cors');
-const fs = require('fs')
 
 
 const db=mysql.createPool({
@@ -138,6 +137,26 @@ app.get("/eventSNo/decending",(req,res)=>{
 
 
 
+
+
+// admin apis
+
+app.get("/adminInfo",(req,res)=>{
+    var name=req.query.name;
+    var email=req.query.email;
+    var pass=req.query.pass;
+    const getAll="select * from cuinfo_admin where admin_name=? and admin_email=? and admin_pass=?;";
+    db.query(getAll,[name,email,pass],(err,result)=>{
+        res.send(result);
+    })
+})
+app.post("/deleteEventCard",(req,res)=>{
+    var sno=req.body.sno;
+    const postAll="delete from cuinfo_events where event_id=?;"
+    db.query(postAll,[sno],(err,result)=>{
+        res.send(result);
+    })
+})
 
 
 

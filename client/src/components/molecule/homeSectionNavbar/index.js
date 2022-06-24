@@ -1,11 +1,11 @@
 import './index.css';
 
 
-const  homeSectionNavbar=()=> {
+const  homeSectionNavbar=(props)=> {
   return (
     <>
       <nav>
-        <div className="admin">ADMIN</div>
+        <div className="admin" onClick={()=>{props.adminClicked(1)}}>ADMIN</div>
       </nav>
     </>
   );

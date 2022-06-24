@@ -1,9 +1,14 @@
 import './index.css';
+import { useEffect } from 'react';
 import youtube_img0 from './../../assets/images/youtubeimage/youtube img0.svg';
 import YoutubeSectionDisplay from './../../molecule/youtubeSectionDisplay/index';
 
 
 const  Youtube=()=> {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function sectionDisplay()
   {

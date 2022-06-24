@@ -7,28 +7,48 @@ import {useState,useEffect} from 'react';
 
 
 
-const  Event=()=> {
+const  Event=(props)=> {
 
-  const [all,setAll]=useState()
+  const [all,setAll]=useState();
   const [displayFilter,setDisplayFilter]=useState({
                                               section:"none",
                                               onButton:"block",
                                               closeButton:"none"
-  })
+  });
   const [whichDisplay,setWhichDisplay]=useState("all");
-  const [accendingDateRes,setAccendingDateRes]=useState()
-  const [decendingDateRes,setDecendingDateRes]=useState()
-  const [accendingSNoRes,setAccendingSNoRes]=useState()
-  const [decendingSNoRes,setDecendingSNoRes]=useState()
+  const [accendingDateRes,setAccendingDateRes]=useState();
+  const [decendingDateRes,setDecendingDateRes]=useState();
+  const [accendingSNoRes,setAccendingSNoRes]=useState();
+  const [decendingSNoRes,setDecendingSNoRes]=useState();
+
+
+
+  const [valDate,setValDate]=useState("");
+  const [valSubject,setValSubject]=useState("");
+  const [valText,setValText]=useState("");
+  const [valSNo,setValSNo]=useState();
+
 
   useEffect(() => {
     Axios.get('http://localhost:3001/eventAll',
     {
       name:"eventAll",
     }).then((res)=>{
-      console.log(res.data)
       setAll(res.data);
     });
+  }, []);
+  function getallagain()
+  {
+    Axios.get('http://localhost:3001/eventAll',
+    {
+      name:"eventAll",
+    }).then((res)=>{
+      setAll(res.data);
+    });
+  }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
   
 
@@ -132,6 +152,28 @@ const  Event=()=> {
     });
   }
 
+  function addSubmit(){
+    Axios.post('http://localhost:3001/addEventCard',
+    {
+      date:valDate,
+      subject:valSubject,
+      text:valText,
+    }).then((res)=>{
+      getallagain();
+    });
+  }
+
+
+  function deleteSubmit()
+  {
+    Axios.post('http://localhost:3001/deleteEventCard',
+    {
+      sno:valSNo,
+    }).then((res)=>{
+      getallagain();
+    });
+  }
+
   return (
     <>
       <div className="event__outer__outer" >
@@ -142,6 +184,48 @@ const  Event=()=> {
           <div className="event__heading">
             Event/Notice
           </div>
+
+          <div className='event__admin' style={{display:props.adminLoggedIn}}>
+            <div className='event__admin__inner'>
+              <div className='event__admin__inner__inner'>
+                <div className='event__admin__heading'>
+                  ADD
+                </div>
+                <div className='event__admin__name'>
+                  date :
+                </div>
+                <input className='event__admin__input' onChange={(e)=>{setValDate(e.target.value)}}/>
+                <div className='event__admin__name'>
+                  subject :
+                </div>
+                <input className='event__admin__input' onChange={(e)=>{setValSubject(e.target.value)}}/>
+                <div className='event__admin__name'>
+                  text :
+                </div>
+                <textarea className='event__admin__input' onChange={(e)=>{setValText(e.target.value)}}/>
+                <div className='event__admin__submit'>
+                  <div className='event__admin__button' onClick={()=>{addSubmit()}}>
+                    Submit
+                  </div>
+                </div>
+
+                
+                <div className='event__admin__heading'>
+                  DELETE
+                </div>
+                <div className='event__admin__name'>
+                  SNo. :
+                </div>
+                <input type="number" className='event__admin__input' onChange={(e)=>{setValSNo(e.target.value)}}/>
+                <div className='event__admin__submit'>
+                  <div className='event__admin__button' onClick={()=>{deleteSubmit()}}>
+                    Submit
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className='event__filter'>
             <div className="event__filter__button" style={{display:displayFilter.onButton}} onClick={()=>{setDisplayFilter({section:"block",onButton:"none",closeButton:"block"})}}>
               <div className="event__filter__button__inner">
