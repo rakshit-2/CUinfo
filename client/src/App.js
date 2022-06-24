@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { useState } from 'react';
 import HomePage from "./components/organism/homePage/index";
 import Notes from "./components/organism/notes/index";
 import Event from "./components/organism/event/index";
@@ -16,11 +17,24 @@ import Youtube from "./components/organism/youtube/index";
 
 
 const App =()=> {
+
+  const[adminLoggedIn,setAdminLoggedIn]=useState("none");
+  function adminControl(x)
+  {
+    if(x===1)
+    {
+      setAdminLoggedIn("block");
+    }
+    else
+    {
+      setAdminLoggedIn("none");
+    }
+  }
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/" element={<HomePage adminControl={adminControl} />} ></Route>
         </Routes>
         <Routes>
           <Route path="/notes" element={<Notes />}></Route>
@@ -29,7 +43,7 @@ const App =()=> {
           <Route path="/dsa" element={<Dsa />}></Route>
         </Routes>
         <Routes>
-          <Route path="/event-notice" element={<Event />}></Route>
+          <Route path="/event-notice" element={<Event adminLoggedIn={adminLoggedIn}/>} ></Route>
         </Routes>
         <Routes>
           <Route path="/youtube" element={<Youtube />}></Route>

@@ -7,9 +7,9 @@ import HomeSectionNavbar from "./../../molecule/homeSectionNavbar/index";
 import Axios from "axios";
 
 
-const  HomePage=()=> {
+const  HomePage=(props)=> {
 
-  const[adminLoggedIn,setAdminLoggedIn]=useState("out");
+  
   const[adminDisplay,setAdminDisplay]=useState({
                                               admin:"none",
                                               home:"block",
@@ -40,16 +40,15 @@ const  HomePage=()=> {
     }).then((res)=>{
       if(res.data.length===0)
       {
-        setAdminLoggedIn("out");
+        props.adminControl(0);
       }
       else
       {
-        setAdminLoggedIn("in");
+        props.adminControl(1);
         setAdminDisplay({admin:"none",home:"block"});
       }
     });
   }
-  console.log(adminLoggedIn)
   return (
     <>
       <div className='home__page__outer' style={{display:adminDisplay.home}}>

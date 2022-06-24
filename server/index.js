@@ -150,6 +150,13 @@ app.get("/adminInfo",(req,res)=>{
         res.send(result);
     })
 })
+app.post("/deleteEventCard",(req,res)=>{
+    var sno=req.body.sno;
+    const postAll="delete from cuinfo_events where event_id=?;"
+    db.query(postAll,[sno],(err,result)=>{
+        res.send(result);
+    })
+})
 
 
 
