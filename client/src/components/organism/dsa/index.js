@@ -2,7 +2,7 @@ import './index.css';
 import { useEffect } from 'react';
 import dsa_img1 from './../../assets/images/dsaimage/dsa img10.svg';
 import DsaSectionDisplay from './../../molecule/dsaSectionDisplay/index';
-
+import DsaSectionSheetDisplay from '../../molecule/dsaSectionSheetDisplay/index';
 
 function sectionDisplay()
 {
@@ -32,6 +32,7 @@ const  Dsa=()=> {
           <div className="dsa__heading">
             Data Structure And Algorithms (DSA)
           </div>
+          <DsaSectionSheetDisplay/>
           {sectionDisplay()}
         </div>
       </div>
