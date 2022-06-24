@@ -150,6 +150,15 @@ app.get("/adminInfo",(req,res)=>{
         res.send(result);
     })
 })
+app.post("/addEventCard",(req,res)=>{
+    var date=req.body.date;
+    var subject=req.body.subject;
+    var text=req.body.text;
+    const postAll="insert into cuinfo_events (event_topic,event_date,event_text) values(?,?,?);"
+    db.query(postAll,[subject,date,text],(err,result)=>{
+        res.send(result);
+    })
+})
 app.post("/deleteEventCard",(req,res)=>{
     var sno=req.body.sno;
     const postAll="delete from cuinfo_events where event_id=?;"
