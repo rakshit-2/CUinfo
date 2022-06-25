@@ -67,6 +67,7 @@
     }
     .notes__card__title {
         font-size: 14px;
+        padding-bottom: 10px;
     }
     .notes__card__text {
         font-size: 12px;
@@ -80,6 +81,6 @@
         display: none;
     }
     .notes__card__info{
-        width:95%;
+        width:90%;
     }
 }
