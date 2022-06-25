@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { useState } from 'react';
+import {useState } from 'react';
 import HomePage from "./components/organism/homePage/index";
 import Notes from "./components/organism/notes/index";
 import Event from "./components/organism/event/index";
@@ -19,6 +19,9 @@ import Youtube from "./components/organism/youtube/index";
 const App =()=> {
 
   const[adminLoggedIn,setAdminLoggedIn]=useState("none");
+
+
+
   function adminControl(x)
   {
     if(x===1)
@@ -37,7 +40,7 @@ const App =()=> {
           <Route path="/" element={<HomePage adminControl={adminControl} />} ></Route>
         </Routes>
         <Routes>
-          <Route path="/notes" element={<Notes />}></Route>
+          <Route path="/notes" element={<Notes/>}></Route>
         </Routes>
         <Routes>
           <Route path="/dsa" element={<Dsa />}></Route>

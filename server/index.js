@@ -136,7 +136,23 @@ app.get("/eventSNo/decending",(req,res)=>{
 })
 
 
+// notes like api
 
+app.get("/noteLikeAll",(req,res)=>{
+    const getAll="select sub_id,sub_like from cuinfo_notes order by sub_id ASC";
+    db.query(getAll,(err,result)=>{
+        res.send(result)
+    })
+})
+
+app.post("/noteLikeNew",(req,res)=>{
+    var id=req.body.id;
+    var count=req.body.count;
+    const getAll="UPDATE cuinfo_notes SET sub_like=? WHERE sub_id=?;";
+    db.query(getAll,[count,id],(err,result)=>{
+        res.send(result)
+    })
+})
 
 
 // admin apis
