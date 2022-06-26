@@ -10,7 +10,7 @@ const  youtubeSectionDisplay=(props)=> {
     var lis=[];
     for(var i=0;i<3;i++)
     {
-        lis.push(<YoutubeCardEach ele={items[props.id].cards[i]}/>)
+        lis.push(<YoutubeCardEach key={i} ele={items[props.id].cards[i]}/>)
     }
     return lis;
     }

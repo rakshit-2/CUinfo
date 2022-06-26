@@ -9,7 +9,7 @@ const  HomeSectionCards=()=> {
     var li=[];
     for(var i=0;i<4;i++)
     {
-      li.push(<HomeCardEach name={items[i].name} img={items[i].image} info={items[i].info} index={i}/>)
+      li.push(<HomeCardEach key={i} name={items[i].name} img={items[i].image} info={items[i].info} index={i}/>)
     }
     return li;
   }

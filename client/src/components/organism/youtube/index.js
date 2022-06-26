@@ -16,7 +16,7 @@ const  Youtube=()=> {
     var li=[];
     for(var i=0;i<11;i++)
     {
-      li.push(<YoutubeSectionDisplay id={i}/>)
+      li.push(<YoutubeSectionDisplay key={i} id={i}/>)
     }
     return li;
   }
