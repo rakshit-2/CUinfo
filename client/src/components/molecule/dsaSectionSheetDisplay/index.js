@@ -1,5 +1,4 @@
 import './index.css';
-import test from './../../assets/images/dsaimage/dsa img1.svg';
 import item from './../../assets/store/dsaSheetData';
 
 const  DsaSectionSheetDisplay=()=> {
