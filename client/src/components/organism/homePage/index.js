@@ -14,6 +14,10 @@ const  HomePage=(props)=> {
                                               admin:"none",
                                               home:"block",
   });
+  const[loginClick,setLoginClick]=useState({
+                                          prev:"block",
+                                          new:"none",      
+  })
   const[name,setName]=useState("");
   const[email,setEmail]=useState("");
   const[pass,setPass]=useState("");
@@ -41,11 +45,15 @@ const  HomePage=(props)=> {
       if(res.data.length===0)
       {
         props.adminControl(0);
+        setLoginClick({prev:"none",new:"block"});
       }
       else
       {
         props.adminControl(1);
         setAdminDisplay({admin:"none",home:"block"});
+        setName("");
+        setEmail("");
+        setPass("")
       }
     });
   }
@@ -69,19 +77,23 @@ const  HomePage=(props)=> {
             <div className='admin__text'>
               Name : 
             </div>
-            <input typr="text" className='admin__text__input' onChange={(e)=>{setName(e.target.value)}}/>
+            <input type="text" className='admin__text__input' onChange={(e)=>{setName(e.target.value)}}/>
             <div className='admin__text'>
               Email : 
             </div>
-            <input typr="email" className='admin__text__input' onChange={(e)=>{setEmail(e.target.value)}}/>
+            <input type="email" className='admin__text__input' onChange={(e)=>{setEmail(e.target.value)}}/>
             <div className='admin__text'>
               Password : 
             </div>
-            <input typr="password" className='admin__text__input' onChange={(e)=>{setPass(e.target.value)}}/>
+            <input type="password" className='admin__text__input' onChange={(e)=>{setPass(e.target.value)}}/>
             <div className='admin__submit'>
-              <div className='admin__submit__button' onClick={()=>{loginClicked()}}>
+              <div className='admin__submit__button' style={{display:loginClick.prev}} onClick={()=>{loginClicked()}}>
                 Login
               </div>
+              <div className='admin__submit__button' style={{display:loginClick.new,cursor:"not-allowed"}}>
+                Login Declined
+              </div>
+              
             </div>
           </div>
           <div className='admin__home__button' onClick={()=>{adminClicked(0)}}>
