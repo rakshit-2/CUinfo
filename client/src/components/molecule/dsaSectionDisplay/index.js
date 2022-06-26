@@ -10,7 +10,7 @@ const  dsaSectionDisplay=(props)=> {
     var lis=[];
     for(var i=0;i<3;i++)
     {
-      lis.push(<DsaCardEach ele={items[props.id].cards[i]}/>)
+      lis.push(<DsaCardEach key={i} ele={items[props.id].cards[i]}/>)
     }
     return lis;
   }

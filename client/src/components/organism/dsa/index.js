@@ -10,7 +10,7 @@ function sectionDisplay()
   var li=[];
   for(var i=0;i<4;i++)
   {
-    li.push(<DsaSectionDisplay id={i}/>)
+    li.push(<DsaSectionDisplay key={i} id={i}/>)
   }
   return li;
 }

@@ -8,7 +8,7 @@ const  DsaSectionSheetDisplay=()=> {
     var li=[];
     for(var i=0;i<6;i++)
     {
-      li.push(<a className='dsa__sheet__card' href={item[i].link} target="_black" >
+      li.push(<a key={i} className='dsa__sheet__card' href={item[i].link} target="_black" >
                 <img src={item[i].image} className="dsa__sheet__card__image"/>
                 <div className='dsa__sheet__heading'>
                   {item[i].name}
