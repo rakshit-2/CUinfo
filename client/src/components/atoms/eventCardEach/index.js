@@ -11,15 +11,50 @@ const  EventCardEach=(props)=> {
         var flag=0;
         for(var i=0;i<ele.length;i++)
         {
-            if(ele[i]==="$")
+            if(ele[i]==="*")
             {
-                li.push(<><p>{word}</p><br></br></>);
+                var val="";
+                for(var j=i+1;j<ele.length;j++)
+                {
+                    if(ele[j]==="*")
+                    {
+                        i=j;
+                        break;
+                    }
+                    val=val+ele[j];
+                }
+                li.push(<><span>{word}</span><span style={{fontWeight:"bolder"}}>{val}</span></>)
                 word="";
+                flag=1;
             }
             else if(ele[i]==="%")
             {
-                li.push(<><p>{word}</p></>);
-                word="";
+                if(flag===1)
+                {
+                    li.push(<><p style={{display:"inline"}}>{word}</p><br></br><br></br></>);
+                    word="";
+                    flag=0;
+                }
+                else
+                {
+                    li.push(<><p>{word}</p><br></br></>);
+                    word="";
+                }
+                
+            }
+            else if(ele[i]==="$")
+            {
+                if(flag===1)
+                {
+                    li.push(<><p style={{display:"inline"}}>{word}</p><br></br></>);
+                    word="";
+                    flag=0;
+                }
+                else
+                {
+                    li.push(<><p>{word}</p></>);
+                    word="";
+                }
             }
             else
             {
@@ -44,7 +79,6 @@ const  EventCardEach=(props)=> {
             </div>
         </div>
         <div className="event__card__text">
-            {/* {props.all.event_text} */}
             {eventCardText()}
         </div>
     </div>
