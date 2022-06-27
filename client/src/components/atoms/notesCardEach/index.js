@@ -17,13 +17,8 @@ const notesCardEach = ({ items }) => {
   return (
     <div className="notes__card__section">
       {items.map((item) => {
-        const [val,setVal]=useState("");
         const [view,setView]=useState();
         const { id, title, img, desc } = item;
-        function handlePdf(x)
-        {
-          setVal("http://localhost:3001/pdf"+String(x));
-        }
         function handlePdfView(x)
         {
           var li=[pdf1,pdf2,pdf3,pdf4,pdf5,pdf6,pdf7,pdf8,pdf9];
@@ -38,11 +33,8 @@ const notesCardEach = ({ items }) => {
                 </header>
                 <p className="notes__card__text">{desc}</p>
                 <div className="notes__card__button">
-                  <a href={val} className="notes__card__download__button" onClick={()=>{handlePdf(id)}}>
-                    <img src={download_icon} className="notes__download" alt=""/>{'\u00A0'}Download PDF
-                  </a>
                   <a href={view} target="_black" className="notes__card__download__button" onClick={()=>{handlePdfView(id)}}>
-                    <img src={download_icon} className="notes__download" alt=""/>{'\u00A0'}View PDF
+                    <img src={download_icon} className="notes__download" alt=""/>{'\u00A0'}Download PDF
                   </a>
                 </div>
               </div>
