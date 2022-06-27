@@ -29,7 +29,7 @@ const notesCardEach = ({ items }) => {
               <img src={img} alt={title} className="notes__card__photo" />
               <div className="notes__card__info">
                 <header>
-                  <h4 className="notes__card__title">{title}</h4>
+                  <div className="notes__card__title">{title}</div>
                 </header>
                 <p className="notes__card__text">{desc}</p>
                 <div className="notes__card__button">
