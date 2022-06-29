@@ -39,7 +39,7 @@
     height:100%;
 }
 
-.notes__card__title {
+.notes__card__titlee {
     font-size: 18px;
     font-weight: bolder;
 }
@@ -97,7 +97,7 @@
         margin-left: 0px;
         margin-right: 0px;
     }
-    .notes__card__title {
+    .notes__card__titlee {
         font-size: 16px;
         padding-bottom: 10px;
     }
@@ -115,7 +115,7 @@
     .notes__card__info{
         width:90%;
     }
-    .notes__card__title {
+    .notes__card__titlee {
         font-size: 16px;
         padding-bottom: 10px;
     }
