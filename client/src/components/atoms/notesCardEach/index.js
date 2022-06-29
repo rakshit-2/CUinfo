@@ -28,9 +28,7 @@ const notesCardEach = ({ items }) => {
             <div key={id} className="notes__card__item">
               <img src={img} alt={title} className="notes__card__photo" />
               <div className="notes__card__info">
-                <header>
-                  <div className="notes__card__title">{title}</div>
-                </header>
+                <div className="notes__card__title">{title}</div>
                 <p className="notes__card__text">{desc}</p>
                 <div className="notes__card__button">
                   <a href={view} target="_black" className="notes__card__download__button" onClick={()=>{handlePdfView(id)}}>
