@@ -4,6 +4,7 @@ import HomeSectionCards from "./../../molecule/homeSectionCard/index";
 import HomeSectionDisplay from "./../../molecule/homeSectionDisplay/index";
 import HomeSectionFeedback from "./../../molecule/homeSectionFeedback/index";
 import HomeSectionNavbar from "./../../molecule/homeSectionNavbar/index";
+import home_icon from './../../assets/icon/home.svg';
 import Axios from "axios";
 
 
@@ -34,7 +35,7 @@ const  HomePage=(props)=> {
   }
   function loginClicked()
   {
-    Axios.get('http://localhost:3001/adminInfo',
+    Axios.get('https://cuinfo.herokuapp.com/adminInfo',
     {
       params:{
         name:name,
@@ -97,7 +98,7 @@ const  HomePage=(props)=> {
             </div>
           </div>
           <div className='admin__home__button' onClick={()=>{adminClicked(0)}}>
-            HOME
+            <img src={home_icon} style={{width:"30px",height:"30px"}}/>HOME
           </div>
         </div>
       </div>

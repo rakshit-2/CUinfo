@@ -30,7 +30,7 @@ const  Event=(props)=> {
 
 
   useEffect(() => {
-    Axios.get('http://localhost:3001/eventAll',
+    Axios.get('https://cuinfo.herokuapp.com/eventAll',
     {
       name:"eventAll",
     }).then((res)=>{
@@ -39,7 +39,7 @@ const  Event=(props)=> {
   }, []);
   function getallagain()
   {
-    Axios.get('http://localhost:3001/eventAll',
+    Axios.get('https://cuinfo.herokuapp.com/eventAll',
     {
       name:"eventAll",
     }).then((res)=>{
@@ -108,7 +108,7 @@ const  Event=(props)=> {
   {
     setWhichDisplay("dateAccending");
     setDisplayFilter({section:"none",onButton:"block",closeButton:"none"});
-    Axios.get('http://localhost:3001/eventDate/accending',
+    Axios.get('https://cuinfo.herokuapp.com/eventDate/accending',
     {
       name:"eventDateAccending",
     }).then((res)=>{
@@ -120,7 +120,7 @@ const  Event=(props)=> {
   {
     setWhichDisplay("dateDecending");
     setDisplayFilter({section:"none",onButton:"block",closeButton:"none"});
-    Axios.get('http://localhost:3001/eventDate/decending',
+    Axios.get('https://cuinfo.herokuapp.com/eventDate/decending',
     {
       name:"eventDateDecending",
     }).then((res)=>{
@@ -132,7 +132,7 @@ const  Event=(props)=> {
   {
     setWhichDisplay("SNoAccending");
     setDisplayFilter({section:"none",onButton:"block",closeButton:"none"});
-    Axios.get('http://localhost:3001/eventSNo/accending',
+    Axios.get('https://cuinfo.herokuapp.com/eventSNo/accending',
     {
       name:"eventSNoAccending",
     }).then((res)=>{
@@ -144,7 +144,7 @@ const  Event=(props)=> {
   {
     setWhichDisplay("SNoDecending");
     setDisplayFilter({section:"none",onButton:"block",closeButton:"none"});
-    Axios.get('http://localhost:3001/eventSNo/decending',
+    Axios.get('https://cuinfo.herokuapp.com/eventSNo/decending',
     {
       name:"eventSNoDecending",
     }).then((res)=>{
@@ -153,7 +153,7 @@ const  Event=(props)=> {
   }
 
   function addSubmit(){
-    Axios.post('http://localhost:3001/addEventCard',
+    Axios.post('https://cuinfo.herokuapp.com/addEventCard',
     {
       date:valDate,
       subject:valSubject,
@@ -166,7 +166,7 @@ const  Event=(props)=> {
 
   function deleteSubmit()
   {
-    Axios.post('http://localhost:3001/deleteEventCard',
+    Axios.post('https://cuinfo.herokuapp.com/deleteEventCard',
     {
       sno:valSNo,
     }).then((res)=>{
