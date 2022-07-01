@@ -16,8 +16,8 @@ const  HomeSectionDisplay=()=> {
       <div className="outer__container">
         <div className="inner__container__1">
           <div className="info">
-            <div className="info__title">Notes<br/> From CUinfo</div>
-            <p className="info__desc">These notes are created by one and only Rakshit sharma with extraordiary efforts</p>
+            <div className="info__title">With<br/>Dsacamp</div>
+            <p className="info__desc">Kickstart your career, World has enough coders. Be more than just a coder.</p>
             <div onClick={()=>{getStartedClicked()}} className="info__button">Get started</div>
           </div>
         </div>
