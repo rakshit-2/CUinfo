@@ -17,7 +17,7 @@ const  HomeSectionCards=()=> {
 
   return (
     <>
-    <h1 className='card__heading'>Services Provided By CUinfo</h1>
+    <h1 className='card__heading'>Dsacamp Exclusive Features</h1>
     <div className="card__section">
       {cardDisplay()}
     </div>

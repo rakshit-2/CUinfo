@@ -7,11 +7,9 @@
     height:fit-content;
     border-radius: 10px;
     background: rgb(251, 249, 249);
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.event__card__inner:hover{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: default;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .event__card__heading{
@@ -19,11 +17,11 @@
     height:fit-content;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .event__card__heading__no
 {
-    width:5%;
+    width:fit-content;
     height:3rem;
     display: flex;
     height:3rem;
@@ -36,12 +34,12 @@
 .event__card__heading__topic{
     width:75%;
     min-height: 3rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     display: flex;
-    text-decoration: underline;
     align-items: center;
     height:fit-content;
+    padding-left: 10px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -69,9 +67,12 @@
     .event__card__inner{
         width:90%;
     }
+    .event__card__heading__topic{
+        font-size: 1rem;
+    }
     .event__card__heading__date{
         width:30%;
-        font-size: 15px;
+        font-size: 14px;
     }
     .event__card__heading__topic{
         width:70%;

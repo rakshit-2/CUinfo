@@ -61,7 +61,7 @@ const  Event=(props)=> {
       li=[];
       for(i in all)
       {
-        li.push(<EventCardEach key={i} all={all[i]}/>)
+        li.push(<EventCardEach key={i} all={all[i]} snoCheck={props.adminLoggedIn}/>)
       }
       li.reverse();
       return li;
@@ -71,7 +71,7 @@ const  Event=(props)=> {
       li=[];
       for(i in accendingDateRes)
       {
-        li.push(<EventCardEach key={i} all={accendingDateRes[i]}/>)
+        li.push(<EventCardEach key={i} all={accendingDateRes[i]} snoCheck={props.adminLoggedIn}/>)
       }
       return li;
     }
@@ -80,7 +80,7 @@ const  Event=(props)=> {
       li=[];
       for(i in decendingDateRes)
       {
-        li.push(<EventCardEach key={i} all={decendingDateRes[i]}/>)
+        li.push(<EventCardEach key={i} all={decendingDateRes[i]} snoCheck={props.adminLoggedIn}/>)
       }
       return li;
     }
@@ -89,7 +89,7 @@ const  Event=(props)=> {
       li=[];
       for(i in accendingSNoRes)
       {
-        li.push(<EventCardEach key={i} all={accendingSNoRes[i]}/>)
+        li.push(<EventCardEach key={i} all={accendingSNoRes[i]} snoCheck={props.adminLoggedIn}/>)
       }
       return li;
     }
@@ -98,7 +98,7 @@ const  Event=(props)=> {
       li=[];
       for(i in decendingSNoRes)
       {
-        li.push(<EventCardEach key={i} all={decendingSNoRes[i]}/>)
+        li.push(<EventCardEach key={i} all={decendingSNoRes[i]} snoCheck={props.adminLoggedIn}/>)
       }
       return li;
     }

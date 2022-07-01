@@ -7,22 +7,22 @@ const homeCardData = {
     0:  {
         name:"Notes",
         image:home_img1,
-        info:"Subject notes, handwritten 100% cho covered Subject notes, handwritten 100% cho covered",
+        info:"B.Tech all subject notes available for free. With refference links to geeksforgeeks, javatpoint, w3school etc.",
         },
     1:  {
         name:"DSA",
         image:home_img2,
-        info:"Subject notes, handwritten 100% cho covered Subject notes, handwritten 100% cho covered",
+        info:"Data Structures And Algorithm related sheets and website links availabe for interview/placement practice.",
         },
     2:  {
         name:"Event/Notice",
         image:home_img3,
-        info:"Subject notes, handwritten 100% cho covered Subject notes, handwritten 100% cho covered",
+        info:"All event related information and College related information quickly available.",
         },
     3:  {
         name:"Youtube",
         image:home_img4,
-        info:"Subject notes, handwritten 100% cho covered Subject notes, handwritten 100% cho covered",
+        info:"Famous youtubers channel links for DSA, Web Dev, Company reviews, Vlogs etc",
         },
     };
   export default homeCardData;

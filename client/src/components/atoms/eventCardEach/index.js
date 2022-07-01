@@ -68,7 +68,7 @@ const  EventCardEach=(props)=> {
     <>
     <div className="event__card__inner">
         <div className="event__card__heading">
-            <div className="event__card__heading__no">
+            <div className="event__card__heading__no" style={{display:props.snoCheck}}>
                 {props.all.event_id}
             </div>
             <div className="event__card__heading__topic">
