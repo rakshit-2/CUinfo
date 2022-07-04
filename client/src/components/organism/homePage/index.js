@@ -1,5 +1,5 @@
 import './index.css';
-import { useState } from 'react';
+import {useState,useEffect} from 'react';
 import HomeSectionCards from "./../../molecule/homeSectionCard/index";
 import HomeSectionDisplay from "./../../molecule/homeSectionDisplay/index";
 import HomeSectionFeedback from "./../../molecule/homeSectionFeedback/index";
@@ -10,6 +10,13 @@ import Axios from "axios";
 
 const  HomePage=(props)=> {
 
+  useEffect(() => {
+    Axios.get('https://cuinfo.herokuapp.com/eventAll',
+    {
+      name:"eventAll",
+    }).then((res)=>{
+    });
+  }, []);
   
   const[adminDisplay,setAdminDisplay]=useState({
                                               admin:"none",
@@ -98,7 +105,7 @@ const  HomePage=(props)=> {
             </div>
           </div>
           <div className='admin__home__button' onClick={()=>{adminClicked(0)}}>
-            <img src={home_icon} style={{width:"30px",height:"30px"}}/>HOME
+            <img src={home_icon} style={{width:"30px",height:"30px"}} alt=""/>HOME
           </div>
         </div>
       </div>
