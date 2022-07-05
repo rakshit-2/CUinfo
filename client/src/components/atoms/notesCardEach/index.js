@@ -1,15 +1,15 @@
 import React, {useState } from "react";
 import './index.css';
 import download_icon from './../../assets/icon/download.svg';
-import pdf1 from './../../assets/pdfs/pdf_subid_1.pdf';
-import pdf2 from './../../assets/pdfs/pdf_subid_2.pdf';
-import pdf3 from './../../assets/pdfs/pdf_subid_3.pdf';
+// import pdf1 from './../../assets/pdfs/pdf_subid_1.pdf';
+// import pdf2 from './../../assets/pdfs/pdf_subid_2.pdf';
+// import pdf3 from './../../assets/pdfs/pdf_subid_3.pdf';
 import Java from './../../assets/pdfs/JAVA_dsacamp.pdf';
 import Python from './../../assets/pdfs/PYTHON_dsacamp.pdf';
-import pdf6 from './../../assets/pdfs/pdf_subid_6.pdf';
-import pdf7 from './../../assets/pdfs/pdf_subid_7.pdf';
-import pdf8 from './../../assets/pdfs/pdf_subid_8.pdf';
-import pdf9 from './../../assets/pdfs/pdf_subid_9.pdf';
+// import pdf6 from './../../assets/pdfs/pdf_subid_6.pdf';
+import Ai from './../../assets/pdfs/AI_dsacamp.pdf';
+import Ml from './../../assets/pdfs/ML_dsacamp.pdf';
+import Oops from './../../assets/pdfs/OOPS_dsacamp.pdf';
 
 
 
@@ -21,7 +21,7 @@ const notesCardEach = ({ items }) => {
         const { id, title, img, desc } = item;
         function handlePdfView(x)
         {
-          var li=[pdf1,pdf2,pdf3,Java,Python,pdf6,pdf7,pdf8,pdf9];
+          var li=[Java,Python,Ai,Ml,Oops];
           setView(li[x-1]);
         }
         return (
