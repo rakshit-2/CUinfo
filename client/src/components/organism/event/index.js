@@ -1,13 +1,18 @@
 import './index.css';
 import event_img1 from './../../assets/images/eventImage/event img1.svg';
 import EventCardEach from './../../atoms/eventCardEach/index';
+import LoadingScreen from './../../atoms/loadingScreen/index';
 import Axios from 'axios';
 import {useState,useEffect} from 'react';
 
 
 
 
-const  Event=(props)=> {
+const Event=(props)=> {
+
+  
+
+
 
   const [all,setAll]=useState();
   const [displayFilter,setDisplayFilter]=useState({
@@ -35,6 +40,7 @@ const  Event=(props)=> {
       name:"eventAll",
     }).then((res)=>{
       setAll(res.data);
+      props.changeLoadingFalse();
     });
   }, []);
   function getallagain()
@@ -270,9 +276,17 @@ const  Event=(props)=> {
           </div>
             
           </div>
-          <div className="event__card__outer">
-            {displayCard()}
-          </div>
+          {
+            props.loading ? (
+                <div class="loading-inner">
+                    <LoadingScreen/>
+                </div>
+            ):(
+            <div className="event__card__outer">
+              {displayCard()}
+            </div>
+            )
+          }
         </div>
       </div>
     </>

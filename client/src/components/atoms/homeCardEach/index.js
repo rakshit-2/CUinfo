@@ -20,6 +20,7 @@ const  HomeCardEach=(props)=> {
         break;
       case 2:
         console.log("event-notice");
+        props.changeLoading();
         navigate("/event-notice");
         break;
       case 3:
