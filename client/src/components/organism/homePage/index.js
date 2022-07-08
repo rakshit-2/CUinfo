@@ -72,7 +72,7 @@ const  HomePage=(props)=> {
         <br></br>
         <HomeSectionDisplay/>
         <br></br>
-        <HomeSectionCards/>
+        <HomeSectionCards changeLoading={props.changeLoading}/>
         <br></br>
         <HomeSectionFeedback/>
       </div>

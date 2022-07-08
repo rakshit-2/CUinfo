@@ -19,8 +19,19 @@ import Youtube from "./components/organism/youtube/index";
 const App =()=> {
 
   const[adminLoggedIn,setAdminLoggedIn]=useState("none");
+  const[loading,setLoading]=useState(false);
 
-//  hello
+
+
+  function changeLoading()
+  {
+    setLoading(true);
+  }
+
+  function changeLoadingFalse()
+  {
+    setLoading(false);
+  }
 
   function adminControl(x)
   {
@@ -37,7 +48,7 @@ const App =()=> {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage adminControl={adminControl} />} ></Route>
+          <Route path="/" element={<HomePage adminControl={adminControl} changeLoading={changeLoading}/>} ></Route>
         </Routes>
         <Routes>
           <Route path="/notes" element={<Notes/>}></Route>
@@ -46,7 +57,7 @@ const App =()=> {
           <Route path="/dsa" element={<Dsa />}></Route>
         </Routes>
         <Routes>
-          <Route path="/event-notice" element={<Event adminLoggedIn={adminLoggedIn}/>} ></Route>
+          <Route path="/event-notice" element={<Event adminLoggedIn={adminLoggedIn} changeLoadingFalse={changeLoadingFalse} loading={loading} /> } ></Route>
         </Routes>
         <Routes>
           <Route path="/youtube" element={<Youtube />}></Route>
