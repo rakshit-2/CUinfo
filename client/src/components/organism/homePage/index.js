@@ -4,7 +4,7 @@ import HomeSectionCards from "./../../molecule/homeSectionCard/index";
 import HomeSectionDisplay from "./../../molecule/homeSectionDisplay/index";
 import HomeSectionFeedback from "./../../molecule/homeSectionFeedback/index";
 import HomeSectionNavbar from "./../../molecule/homeSectionNavbar/index";
-import home_icon from './../../assets/icon/home.svg';
+import home_icon from './../../assets/icon/DSACAMP.png';
 import Axios from "axios";
 
 

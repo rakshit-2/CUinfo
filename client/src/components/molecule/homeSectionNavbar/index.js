@@ -1,5 +1,5 @@
 import './index.css';
-import admin_icon from "./../../assets/icon/admin.svg";
+import admin_icon from "./../../assets/icon/DSACAMP.png";
 
 const  homeSectionNavbar=(props)=> {
   return (
