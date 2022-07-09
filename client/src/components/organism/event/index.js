@@ -134,29 +134,29 @@ const Event=(props)=> {
     });
   }
 
-  function accendingSNoFetch()
-  {
-    setWhichDisplay("SNoAccending");
-    setDisplayFilter({section:"none",onButton:"block",closeButton:"none"});
-    Axios.get('https://cuinfo.herokuapp.com/eventSNo/accending',
-    {
-      name:"eventSNoAccending",
-    }).then((res)=>{
-      setAccendingSNoRes(res.data);
-    });
-  }
+  // function accendingSNoFetch()
+  // {
+  //   setWhichDisplay("SNoAccending");
+  //   setDisplayFilter({section:"none",onButton:"block",closeButton:"none"});
+  //   Axios.get('https://cuinfo.herokuapp.com/eventSNo/accending',
+  //   {
+  //     name:"eventSNoAccending",
+  //   }).then((res)=>{
+  //     setAccendingSNoRes(res.data);
+  //   });
+  // }
 
-  function decendingSNoFetch()
-  {
-    setWhichDisplay("SNoDecending");
-    setDisplayFilter({section:"none",onButton:"block",closeButton:"none"});
-    Axios.get('https://cuinfo.herokuapp.com/eventSNo/decending',
-    {
-      name:"eventSNoDecending",
-    }).then((res)=>{
-      setDecendingSNoRes(res.data);
-    });
-  }
+  // function decendingSNoFetch()
+  // {
+  //   setWhichDisplay("SNoDecending");
+  //   setDisplayFilter({section:"none",onButton:"block",closeButton:"none"});
+  //   Axios.get('https://cuinfo.herokuapp.com/eventSNo/decending',
+  //   {
+  //     name:"eventSNoDecending",
+  //   }).then((res)=>{
+  //     setDecendingSNoRes(res.data);
+  //   });
+  // }
 
   function addSubmit(){
     Axios.post('https://cuinfo.herokuapp.com/addEventCard',
@@ -260,19 +260,7 @@ const Event=(props)=> {
               </div>
             </div>
 
-            <div className='event__filter__display__each'>
-              <div className='event__filter__display__heading'>
-                Sort SNo. : 
-              </div>
-              <div className='event__filter__display__button__outer'>
-                <div className='event__filter__display__button' onClick={()=>{accendingSNoFetch()}} >
-                  Accending
-                </div>
-                <div className='event__filter__display__button' onClick={()=>{decendingSNoFetch()}}>
-                  Decending
-                </div>
-              </div>
-            </div>
+            
           </div>
             
           </div>

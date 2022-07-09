@@ -3,11 +3,11 @@ import './index.css';
 const LoadingScreen = () => {
   return(
       <>
-      <div class="bars-container">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+      <div class="square" id="one"></div>
+      <div class="square" id="two"></div>
+      <div class="square" id="three"></div>
+      <div class="square" id="four"></div>
+      <div class="square" id="five"></div>
       </>
   );
 };
