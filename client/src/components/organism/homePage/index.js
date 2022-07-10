@@ -80,7 +80,7 @@ const  HomePage=(props)=> {
         <div className='admin__login__inner'>
           <div className='admin__login__inner__card'>
             <div className='admin__heading'>
-              ADMIN LOGIN
+              LOGIN
             </div>
             <div className='admin__text'>
               Name : 
