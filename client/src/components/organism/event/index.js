@@ -252,10 +252,10 @@ const Event=(props)=> {
               </div>
               <div className='event__filter__display__button__outer'>
                 <div className='event__filter__display__button' onClick={()=>{accendingDateFetch()}}>
-                  Accending
+                  Oldest
                 </div>
                 <div className='event__filter__display__button' onClick={()=>{decendingDateFetch()}}>
-                  Decending
+                  Latest
                 </div>
               </div>
             </div>
