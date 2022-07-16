@@ -14,8 +14,6 @@
     justify-content: flex-start;
     cursor: pointer;
     background: rgb(251, 249, 249);
-}
-.youtube__card__outer:hover{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .youtube__card__name{

@@ -11,6 +11,7 @@ import Cn from './../../assets/pdfs/ComputerNetworks_ApnaCollege.pdf';
 import Ai from './../../assets/pdfs/AI_dsacamp.pdf';
 import Ml from './../../assets/pdfs/ML_dsacamp.pdf';
 import Oops from './../../assets/pdfs/OOPS_dsacamp.pdf';
+import PA from './../../assets/pdfs/ProgrammingAbstractions_dsacamp.pdf';
 
 
 
@@ -22,7 +23,7 @@ const notesCardEach = ({ items }) => {
         const { id, title, img, desc } = item;
         function handlePdfView(x)
         {
-          var li=[Java,Python,Ai,Ml,Oops,Cn,Dbms,Os,OsLoveBabbar,PythonCodeWithHarry];
+          var li=[PA,Java,Python,Ai,Ml,Oops,Cn,Dbms,Os,OsLoveBabbar,PythonCodeWithHarry];
           setView(li[x-1]);
         }
         return (
