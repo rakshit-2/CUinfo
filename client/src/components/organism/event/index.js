@@ -190,6 +190,9 @@ const Event=(props)=> {
           <div className="event__heading">
             Event/Notice
           </div>
+          <div className="event__heading__mobile">
+            Event
+          </div>
 
           <div className='event__admin' style={{display:props.adminLoggedIn}}>
             <div className='event__admin__inner'>
