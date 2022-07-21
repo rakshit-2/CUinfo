@@ -2,6 +2,7 @@ import home_img1 from './../../assets/images/homeImage/home img2.svg';
 import home_img2 from './../../assets/images/homeImage/home img3.svg';
 import home_img3 from './../../assets/images/homeImage/home img1.svg';
 import home_img4 from './../../assets/images/homeImage/home img4.svg';
+import home_img5 from './../../assets/images/dsaimage/dsa img3.svg';
 
 const homeCardData = {
     0:  {
@@ -23,6 +24,11 @@ const homeCardData = {
         name:"Youtube",
         image:home_img4,
         info:"Famous youtubers channel links for DSA, Web Dev, Company reviews, Vlogs etc",
+        },
+    4:  {
+        name:"EmptyClass",
+        image:home_img5,
+        info:"List of empty classroom at present in turing block Chitkara University, Punjab",
         },
     };
   export default homeCardData;
