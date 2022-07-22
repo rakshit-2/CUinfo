@@ -11,24 +11,20 @@ const  HomeCardEach=(props)=> {
   {
     switch(x) {
       case 0:
-        console.log("notes");
-        navigate("/notes");
+        navigate("/EmptyClass");
         break;
       case 1:
-        console.log("dsa");
-        navigate("/dsa");
+        navigate("/notes");
         break;
       case 2:
-        console.log("event-notice");
         props.changeLoading();
-        navigate("/event-notice");
+        navigate("/dsa");
         break;
       case 3:
-        console.log("youtube");
         navigate("/youtube");
         break;
       default:
-        console.log("oh")
+        console.log("oh");
     }
   }
   return (
