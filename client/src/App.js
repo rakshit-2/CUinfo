@@ -64,7 +64,7 @@ const App =()=> {
       period=9;
   }
 
-  if(period==-1)
+  if(period===-1)
   {
     period="No class Empty";
   }

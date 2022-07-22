@@ -1,6 +1,6 @@
 import React from "react";
 import './index.css';
-import { useEffect,useState } from "react";
+import { useEffect } from "react";
 import items from "./../../assets/store/EmptyClassData";
 import EclassCardEach from './../../atoms/EclassCardEach/index';
 import notes_img1 from './../../assets/images/notesImage/notes img11.svg';
