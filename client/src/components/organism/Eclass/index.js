@@ -9,6 +9,7 @@ const Eclass=(props)=> {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   function sectionDisplay()
   {
     var day=parseInt(props.day,10);
@@ -91,10 +92,13 @@ const Eclass=(props)=> {
             Empty Class
         </div>
         <div className="Eclass__heading2">
-            Turing Block Empty Classes, Chitkara University, punjab (According to lecture)
+            Empty Classes in Turing Block, Chitkara University, Punjab
         </div>
         <div className="Eclass__heading2" style={{fontWeight:'600'}}>
             Lecture:{'\u00A0'}<span style={{color:"#C1576A",fontSize:"20px"}}> {props.pp}</span>
+        </div>
+        <div className="Eclass__heading2" style={{fontWeight:'600',height:"1rem",marginBottom:"10px"}}>
+            Time:{'\u00A0'}<span style={{color:"#C1576A",fontSize:"20px"}}>{props.hour}:{props.min}</span>{'\u00A0'}(RELOAD For latest results)
         </div>
         <div className="Eclass__card__outer">
           <div className="Eclass__card__inner">
