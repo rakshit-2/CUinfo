@@ -66,7 +66,7 @@ const App =()=> {
 
   if(period===-1)
   {
-    period="No class Empty";
+    period="Lecture's Over";
   }
 
   function changeLoading()

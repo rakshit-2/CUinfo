@@ -95,7 +95,7 @@ const Eclass=(props)=> {
             Empty Classes in Turing Block, Chitkara University, Punjab
         </div>
         <div className="Eclass__heading2" style={{fontWeight:'600'}}>
-            Lecture:{'\u00A0'}<span style={{color:"#C1576A",fontSize:"20px"}}> {props.pp}</span>
+            Lecture No. :{'\u00A0'}<span style={{color:"#C1576A",fontSize:"20px"}}> {props.pp}</span>
         </div>
         <div className="Eclass__heading2" style={{fontWeight:'600',height:"1rem",marginBottom:"10px"}}>
             Time:{'\u00A0'}<span style={{color:"#C1576A",fontSize:"20px"}}>{props.hour}:{props.min}</span>{'\u00A0'}(RELOAD For latest results)

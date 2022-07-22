@@ -6,29 +6,30 @@ import home_img5 from './../../assets/images/dsaimage/dsa img3.svg';
 
 const homeCardData = {
     0:  {
+        name:"EmptyClass",
+        image:home_img5,
+        info:"Empty classroom's available during lecture hours for self-study(TuringBlock) Chitkara University, Punjab",
+        },
+    1:  {
         name:"Notes",
         image:home_img1,
         info:"B.Tech all subject notes available for free. With refference links to geeksforgeeks, javatpoint, w3school etc.",
         },
-    1:  {
+    2:  {
         name:"DSA",
         image:home_img2,
         info:"Data Structures And Algorithm related sheets and website links availabe for interview/placement practice.",
         },
-    2:  {
-        name:"Event/Notice",
-        image:home_img3,
-        info:"All event related information and College related information quickly available.",
-        },
+    // 2:  {
+    //     name:"Event/Notice",
+    //     image:home_img3,
+    //     info:"All event related information and College related information quickly available.",
+    //     },
     3:  {
         name:"Youtube",
         image:home_img4,
         info:"Famous youtubers channel links for DSA, Web Dev, Company reviews, Vlogs etc",
         },
-    4:  {
-        name:"EmptyClass",
-        image:home_img5,
-        info:"List of empty classroom at present in turing block Chitkara University, Punjab",
-        },
+    
     };
   export default homeCardData;
