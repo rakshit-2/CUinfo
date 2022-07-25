@@ -13,46 +13,46 @@ const Eclass=(props)=> {
   function sectionDisplay()
   {
     var day=parseInt(props.day,10);
-    var hour=parseInt(props.hour,10);
-    var min=parseInt(props.min, 10);
-    var period=-1;
+    // var hour=parseInt(props.hour,10);
+    // var min=parseInt(props.min, 10);
+    var period=props.pp;
 
-    if((hour>=9 && hour<=9) && (min>=0 && min<=49))
-    {
-        period=1;
-    }
-    else if((hour>=9 && hour<=10) && ((min>=50 && min<=60)||(min>=0 && min<=39)))
-    {
-        period=2;
-    }
-    else if((hour>=10 && hour<=11) && ((min>=40 && min<=60)||(min>=0 && min<=30)))
-    {
-        period=3;
-    }
-    else if((hour>=11 && hour<=12) && ((min>=30 && min<=60)||(min>=0 && min<=19)))
-    {
-        period=4;
-    }
-    else if((hour>=12 && hour<=13) && ((min>=20 && min<=60)||(min>=0 && min<=9)))
-    {
-        period=5;
-    }
-    else if((hour>=13 && hour<=14) && ((min>=10 && min<=60)))
-    {
-        period=6;
-    }
-    else if((hour>=14 && hour<=14) && ((min>=0 && min<=50)))
-    {
-        period=7;
-    }
-    else if((hour>=14 && hour<=15) && ((min>=50 && min<=60)||(min>=0 && min<=39)))
-    {
-        period=8;
-    }
-    else if((hour>=15 && hour<=16) && ((min>=40 && min<=60)||(min>=0 && min<=30)))
-    {
-        period=9;
-    }
+    // if((hour>=9 && hour<=9) && (min>=0 && min<=49))
+    // {
+    //     period=1;
+    // }
+    // else if((hour>=9 && hour<=10) && ((min>=50 && min<=60)||(min>=0 && min<=39)))
+    // {
+    //     period=2;
+    // }
+    // else if((hour>=10 && hour<=11) && ((min>=40 && min<=60)||(min>=0 && min<=30)))
+    // {
+    //     period=3;
+    // }
+    // else if((hour>=11 && hour<=12) && ((min>=30 && min<=60)||(min>=0 && min<=19)))
+    // {
+    //     period=4;
+    // }
+    // else if((hour>=12 && hour<=13) && ((min>=20 && min<=60)||(min>=0 && min<=9)))
+    // {
+    //     period=5;
+    // }
+    // else if((hour>=13 && hour<=14) && ((min>=10 && min<=60)))
+    // {
+    //     period=6;
+    // }
+    // else if((hour>=14 && hour<=14) && ((min>=0 && min<=50)))
+    // {
+    //     period=7;
+    // }
+    // else if((hour>=14 && hour<=15) && ((min>=50 && min<=60)||(min>=0 && min<=39)))
+    // {
+    //     period=8;
+    // }
+    // else if((hour>=15 && hour<=16) && ((min>=40 && min<=60)||(min>=0 && min<=30)))
+    // {
+    //     period=9;
+    // }
     
     if(period===-1)
     {

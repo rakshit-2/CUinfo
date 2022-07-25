@@ -25,44 +25,64 @@ const App =()=> {
   var day=d.getDay();
   var hour=d.getHours();
   var min=d.getMinutes();
+  var hhh=hour.toString();
+  var mmm=min.toString();
+  if(hhh.length<=1)
+  {
+    var hh="0"+hhh;
+  }
+  else
+  {
+    var hh=hhh;
+  }
+  if(mmm.length<=1)
+  {
+    var mm="0"+mmm;
+  }
+  else{
+    var mm=mmm;
+  }
+  var ans=hh+mm;
+  var check=parseInt(ans);
 
   var period=-1;
-  if((hour>=9 && hour<=9) && (min>=0 && min<=49))
+  if(check>=900 && check<=950)
   {
-      period=1;
+    period=1;
   }
-  else if((hour>=9 && hour<=10) && ((min>=50 && min<=60)||(min>=0 && min<=39)))
+  else if(check>=951 && check<=1040)
   {
-      period=2;
+    period=2;
   }
-  else if((hour>=10 && hour<=11) && ((min>=40 && min<=60)||(min>=0 && min<=30)))
+  else if(check>=1041 && check<=1130)
   {
-      period=3;
+    period=3;
   }
-  else if((hour>=11 && hour<=12) && ((min>=30 && min<=60)||(min>=0 && min<=19)))
+  else if(check>=1131 && check<=1220)
   {
-      period=4;
+    period=4;
   }
-  else if((hour>=12 && hour<=13) && ((min>=20 && min<=60)||(min>=0 && min<=9)))
+  else if(check>=1221 && check<=1310)
   {
-      period=5;
+    period=5;
   }
-  else if((hour>=13 && hour<=14) && ((min>=10 && min<=60)))
+  else if(check>=1311 && check<=1400)
   {
-      period=6;
+    period=6;
   }
-  else if((hour>=14 && hour<=14) && ((min>=0 && min<=50)))
+  else if(check>=1401 && check<=1450)
   {
-      period=7;
+    period=7;
   }
-  else if((hour>=14 && hour<=15) && ((min>=50 && min<=60)||(min>=0 && min<=39)))
+  else if(check>=1451 && check<=1540)
   {
-      period=8;
+    period=8;
   }
-  else if((hour>=15 && hour<=16) && ((min>=40 && min<=60)||(min>=0 && min<=30)))
+  else if(check>=1541 && check<=1630)
   {
-      period=9;
+    period=9;
   }
+  
 
   if(period===-1)
   {
