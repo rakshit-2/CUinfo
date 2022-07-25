@@ -27,6 +27,7 @@ const App =()=> {
   var min=d.getMinutes();
   var hhh=hour.toString();
   var mmm=min.toString();
+  var val="";
   if(hhh.length<=1)
   {
     var hh="0"+hhh;
@@ -86,10 +87,6 @@ const App =()=> {
     period=-1;
   }
 
-  if(period===-1)
-  {
-    period="Lecture's Over";
-  }
 
   function changeLoading()
   {
