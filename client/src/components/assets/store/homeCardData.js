@@ -13,7 +13,7 @@ const homeCardData = {
     1:  {
         name:"Notes",
         image:home_img1,
-        info:"B.Tech all subject notes available for free. With refference links to geeksforgeeks, javatpoint, w3school etc.",
+        info:"B.Tech all subject notes available for free. With reference links to geeksforgeeks, javatpoint, w3school etc.",
         },
     2:  {
         name:"DSA",

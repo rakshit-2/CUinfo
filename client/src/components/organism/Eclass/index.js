@@ -13,15 +13,15 @@ const Eclass=(props)=> {
   function sectionDisplay()
   {
     var day=parseInt(props.day,10);
-    var period=-1;
     
-    if(period===-1)
+    if(props.pp===-1)
     {
       return [<div className="Eclass__modale">
       No Class Empty!!
     </div>];
     }
-    var lis=items[day][period];
+    var lis=items[day][props.pp];
+    console.log(lis)
     if(lis[0]===-1)
     {
       return [<div className="Eclass__modale">
