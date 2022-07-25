@@ -82,7 +82,9 @@ const App =()=> {
   {
     period=9;
   }
-  
+  else{
+    period=-1;
+  }
 
   if(period===-1)
   {
@@ -129,7 +131,7 @@ const App =()=> {
           <Route path="/youtube" element={<Youtube />}></Route>
         </Routes>
         <Routes>
-          <Route path="/EmptyClass" element={<Eclass day={day} hour={hour} min={min} pp={period}/>}></Route>
+          <Route path="/EmptyClass" element={<Eclass day={day} hour={hour} min={min} check={check} pp={period}/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
