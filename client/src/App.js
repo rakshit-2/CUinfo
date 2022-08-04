@@ -128,7 +128,7 @@ const App =()=> {
           <Route path="/youtube" element={<Youtube />}></Route>
         </Routes>
         <Routes>
-          <Route path="/EmptyClass" element={<Eclass day={day} hour={hour} min={min} check={check} pp={period}/>}></Route>
+          <Route path="/EmptyClass" element={<Eclass day={day} hour={hh} min={mm} check={check} pp={period}/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

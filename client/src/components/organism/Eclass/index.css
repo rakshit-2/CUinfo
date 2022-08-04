@@ -49,13 +49,37 @@
   font-family: 'Oswald', sans-serif;
 }
 
-.notes__catogary__outer{
+.Eclass__buttons{
   width:100%;
-  height:fit-content;
+  height:5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.Eclass__buttons_each{
+  width: fit-content;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: #df6178;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.Eclass__display{
+  width:100%;
+  height:fit-content;
+}
+
 
 .Eclass__card__outer{
   width:100%;
@@ -64,6 +88,7 @@
   justify-content: center;
   height:fit-content;
   margin-bottom: 20px;
+  
 }
 .Eclass__card__inner{
   width:70%;
@@ -115,6 +140,12 @@
   .Eclass_img{
     width:400px;
     height:85%;
+  }
+  .Eclass__buttons_each{
+    width: fit-content;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width:440px)
