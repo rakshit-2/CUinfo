@@ -20,15 +20,15 @@ const homeCardData = {
         image:home_img2,
         info:"Data Structures And Algorithm related sheets and website links availabe for interview/placement practice.",
         },
-    // 2:  {
-    //     name:"Event/Notice",
-    //     image:home_img3,
-    //     info:"All event related information and College related information quickly available.",
-    //     },
     3:  {
         name:"Youtube",
         image:home_img4,
         info:"Famous youtubers channel links for DSA, Web Dev, Company reviews, Vlogs etc",
+        },
+    4:  {
+        name:"Event/Notice",
+        image:home_img3,
+        info:"All event related information and College related information quickly available.",
         },
     
     };

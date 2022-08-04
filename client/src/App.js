@@ -18,7 +18,7 @@ import Eclass from "./components/organism/Eclass/index";
 
 
 const App =()=> {
-
+  window.addEventListener("contextmenu", e => e.preventDefault());
   const[adminLoggedIn,setAdminLoggedIn]=useState("none");
   const[loading,setLoading]=useState(false);
   const d = new Date();

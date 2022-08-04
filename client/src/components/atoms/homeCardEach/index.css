@@ -4,6 +4,8 @@
 .card {
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
     width: 300px;
     height: 320px;
     background: rgb(251, 249, 249);

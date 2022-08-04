@@ -23,6 +23,9 @@ const  HomeCardEach=(props)=> {
       case 3:
         navigate("/youtube");
         break;
+      case 4:
+        navigate("/event-notice");
+        break;
       default:
         console.log("oh");
     }
