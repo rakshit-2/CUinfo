@@ -248,23 +248,21 @@ const Event=(props)=> {
             </div>
           </div>
           <div className='event__filter__display' style={{display:displayFilter.section}}>
-          <div className='event__filter__display__inner'>
-            <div className='event__filter__display__each'>
-              <div className='event__filter__display__heading'>
-                Sort Date : 
-              </div>
-              <div className='event__filter__display__button__outer'>
-                <div className='event__filter__display__button' onClick={()=>{accendingDateFetch()}}>
-                  Oldest
+            <div className='event__filter__display__inner'>
+              <div className='event__filter__display__each'>
+                <div className='event__filter__display__heading'>
+                  Sort Date : 
                 </div>
-                <div className='event__filter__display__button' onClick={()=>{decendingDateFetch()}}>
-                  Latest
+                <div className='event__filter__display__button__outer'>
+                  <div className='event__filter__display__button' onClick={()=>{accendingDateFetch()}}>
+                    Oldest
+                  </div>
+                  <div className='event__filter__display__button' onClick={()=>{decendingDateFetch()}}>
+                    Latest
+                  </div>
                 </div>
               </div>
             </div>
-
-            
-          </div>
             
           </div>
           {
