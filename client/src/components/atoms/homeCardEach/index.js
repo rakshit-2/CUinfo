@@ -17,17 +17,20 @@ const  HomeCardEach=(props)=> {
         navigate("/notes");
         break;
       case 2:
-        props.changeLoading();
         navigate("/dsa");
         break;
       case 3:
         navigate("/youtube");
         break;
       case 4:
+        props.changeLoading();
         navigate("/event-notice");
         break;
+      case 5:
+        navigate("/Timetable");
+        break;
       default:
-        console.log("oh");
+        console.log("200");
     }
   }
   return (

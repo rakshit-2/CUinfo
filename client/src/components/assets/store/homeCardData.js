@@ -30,6 +30,10 @@ const homeCardData = {
         image:home_img3,
         info:"All event related information and College related information quickly available.",
         },
-    
+    5:  {
+        name:"Timetable",
+        image:home_img4,
+        info:"CSE time table available with just group no. and sem",
+        },
     };
   export default homeCardData;

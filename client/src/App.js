@@ -11,7 +11,7 @@ import Event from "./components/organism/event/index";
 import Dsa from "./components/organism/dsa/index";
 import Youtube from "./components/organism/youtube/index";
 import Eclass from "./components/organism/Eclass/index";
-
+import Timetable from "./components/organism/timetable/index";
 
 
 
@@ -129,6 +129,9 @@ const App =()=> {
         </Routes>
         <Routes>
           <Route path="/EmptyClass" element={<Eclass day={day} hour={hh} min={mm} check={check} pp={period}/>}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/TimeTable" element={<Timetable/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
